@@ -17,7 +17,7 @@ public class Prescription {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Date visitDate;
+
     @Column(length = 150)
     private String Description;
     @OneToOne
@@ -25,8 +25,8 @@ public class Prescription {
     @OneToOne
     private Physician physician;
 
-    public Prescription(Date visitDate, String description, Patient patient, Physician physician) {
-        this.visitDate = visitDate;
+    public Prescription( String description, Patient patient, Physician physician) {
+
         Description = description;
         this.patient = patient;
         this.physician = physician;
@@ -35,10 +35,10 @@ public class Prescription {
     @Override
     public String toString() {
         return "Prescription{" +
-                "visitDate=" + visitDate + '\'' +
-                ", patient=" + patient.getFirstName() +" "+patient.getLastName()+ "  , nationalCode="+patient.getNationalCode()+ '\'' +
-                ", physician=" + physician.getFirstName() +" "+physician.getLastName()+"  ,expertise"+physician.getExpertise()+ '\'' +
+
+                ", patient= " + patient.getFirstName() +" "+patient.getLastName()+ ", nationalCode= "+patient.getNationalCode()+ '\'' +
+                ", physician= " + physician.getFirstName() +" "+physician.getLastName()+"  ,expertise: "+physician.getExpertise()+ '\'' +
                 ", Description='" + Description +
-                '}';
+                '}'+"\n";
     }
 }

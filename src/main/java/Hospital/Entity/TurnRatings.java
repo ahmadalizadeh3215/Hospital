@@ -17,26 +17,31 @@ public class TurnRatings {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Date visitDate;
+    private String visitDate;
     @OneToOne
     private Patient patient;
     @ManyToOne
     private Clinic clinic;
+    @OneToOne
+    private Prescription prescription;
 
-    public TurnRatings(Date visitDate, Patient patient, Clinic clinic) {
+
+    public TurnRatings(String visitDate, Patient patient, Clinic clinic,Prescription prescription) {
         this.visitDate = visitDate;
         this.patient = patient;
         this.clinic = clinic;
+        this.prescription=prescription;
+
     }
 
     @Override
     public String toString() {
         return "TurnRatings{" +
-                "visitDate=" + visitDate +
+                " visitDate=" + visitDate +
                 ", patient=" + patient.getFirstName() +" "+patient.getLastName()
-                +" , nationalcode ="+patient.getNationalCode()+
-                ", clinic=" + clinic.getName() +" , "+
-                 clinic.getPhysician().getExpertise() +
-                '}';
+                +", nationalcode ="+patient.getNationalCode()+
+                ", clinic=" + clinic.getName() +
+                 ", expertise= "+clinic.getPhysician().getExpertise() +
+                '}'+"\n";
     }
 }

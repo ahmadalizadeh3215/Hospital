@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.persistence.criteria.CriteriaBuilder;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -20,17 +21,21 @@ public class Clinic {
     private String name;
     @ManyToOne
     private Physician physician;
-
-    public Clinic(String name, Physician physician) {
+    private Integer capacity;
+    public Clinic(String name, Physician physician,Integer capacity) {
         this.name = name;
         this.physician = physician;
+        this.capacity=capacity;
     }
 
     @Override
     public String toString() {
         return "Clinic{" +
-                "name='" + name + '\'' +
-                ", physician=" + physician.getFirstName() +" "+physician.getLastName()+"  ,expertise"+physician.getExpertise()+ '\'' +
-                '}';
+                " id= "+id+
+                " name Clinic='" + name + '\'' +
+                ", physician name= " + physician.getFirstName() +" "+physician.getLastName()+
+                "  ,expertise= "+physician.getExpertise()+ '\'' +
+                " ,capacity= "+capacity+
+                '}'+"\n";
     }
 }
