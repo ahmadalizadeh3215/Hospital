@@ -24,3 +24,8 @@
 /src/main/java/Hospital/Service/PrescriptionService.java
 /src/main/java/Hospital/Service/TurnRatingsService.java
 /src/main/java/Hospital/Service/UserService.java
+/src/main/java/Hospital/Exception/
+/src/main/java/Hospital/Exception/InvalidInput.java
+/src/main/java/Hospital/Exception/InvalidNationalCode.java
+/src/main/java/Hospital/Exception/NoDataFound.java
+/src/main/java/Hospital/Exception/RecordDoesNotExist.java
