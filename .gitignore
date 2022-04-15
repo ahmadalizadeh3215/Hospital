@@ -1,1 +1,17 @@
 /src/
+/src/main/java/
+/src/main/java/Hospital/
+/src/main/java/Hospital/DataBase/
+/src/main/java/Hospital/Entity/
+/src/main/java/Hospital/Repository/
+/src/main/java/Hospital/test.java
+/src/main/resources/
+/src/main/java/Hospital/Repository/
+/src/main/java/Hospital/Repository/AdminRepository.java
+/src/main/java/Hospital/Repository/BaseRepository.java
+/src/main/java/Hospital/Repository/ClinicRepository.java
+/src/main/java/Hospital/Repository/PatientRepository.java
+/src/main/java/Hospital/Repository/PhysicianRepository.java
+/src/main/java/Hospital/Repository/PrescriptionRepository.java
+/src/main/java/Hospital/Repository/TurnRatingsRepository.java
+/src/main/java/Hospital/Repository/UserInterface.java
