@@ -29,3 +29,5 @@
 /src/main/java/Hospital/Exception/InvalidNationalCode.java
 /src/main/java/Hospital/Exception/NoDataFound.java
 /src/main/java/Hospital/Exception/RecordDoesNotExist.java
+/src/main/java/Hospital/DataBase/
+/src/main/java/Hospital/DataBase/FakeDB.java
